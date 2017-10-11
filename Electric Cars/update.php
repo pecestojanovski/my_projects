@@ -6,7 +6,7 @@ if($_SESSION['username'] != true) {
 }
 require_once('connect.php');
 $car_id = $_GET['car_id'];
-$res = mysqli_query($connection, "SELECT * FROM crud_table WHERE car_id=$car_id");
+$res = mysqli_query($connection, "SELECT * FROM cars WHERE car_id=$car_id");
 $row = mysqli_fetch_assoc($res);
 if(isset($_POST) & !empty($_POST)){
 	$CarBrand = mysqli_real_escape_string($connection, $_POST['CarBrand']);
@@ -14,7 +14,7 @@ if(isset($_POST) & !empty($_POST)){
 	$CarYear = mysqli_real_escape_string($connection, $_POST['CarYear']);
 	$CarContributor = mysqli_real_escape_string($connection, $_POST['CarContributor']); 
 
-$res = mysqli_query($connection, "UPDATE crud_table SET brand='$CarBrand', model='$CarModel', year='$CarYear', contributor='$CarContributor' WHERE car_id=$car_id");
+$res = mysqli_query($connection, "UPDATE cars SET brand='$CarBrand', model='$CarModel', year='$CarYear', contributor='$CarContributor' WHERE car_id=$car_id");
 if($res) {
 	header('location: list.php');
 } else {
@@ -67,7 +67,7 @@ if($res) {
 			} ?>" required/>
 	</div>
 	<div id="buttonS">
-		<button type="submit" value="submit" class="btn btn-default">Update</button>
+		<button type="submit" value="submit" class="btn btn-info">Update</button>
 	</div>
 	</form>
 	</div>

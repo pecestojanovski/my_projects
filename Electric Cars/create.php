@@ -6,16 +6,18 @@ if($_SESSION['username'] != true) {
 }
 require_once('connect.php');
 if(isset($_POST) & !empty($_POST)) {
-	$CarBrand = mysqli_real_escape_string($connection, $_POST['CarBrand']);
+	$CarImage= addslashes(file_get_contents($_FILES['CarImage']['tmp_name']));
+	$image_name= addslashes($_FILES['CarImage']['name']); 
+ 	$CarBrand = mysqli_real_escape_string($connection, $_POST['CarBrand']);
 	$CarModel = mysqli_real_escape_string($connection, $_POST['CarModel']);
 	$CarYear = mysqli_real_escape_string($connection, $_POST['CarYear']);
 	$CarContributor = mysqli_real_escape_string($connection, $_POST['CarContributor']);
-
-$res = mysqli_query($connection, "INSERT INTO crud_table (brand, model, year, contributor) VALUES ('$CarBrand', '$CarModel', '$CarYear', '$CarContributor')");
+	
+$res = mysqli_query($connection, "INSERT INTO cars (brand, model, year, contributor, image) VALUES ('$CarBrand', '$CarModel', '$CarYear', '$CarContributor', '$CarImage')");
 if($res) {
 	header('location: list.php');
 } else {
-	echo "Car Not Added";
+	echo "Data Not Updated";
 }
 }
 ?>
@@ -41,7 +43,7 @@ if($res) {
   	</div>
 	<div id="form1">
 	<div class="col-sm-8">
-	<form method="post">
+	<form method="post" action="" enctype="multipart/form-data">
 		
 	<div class="form-group float-label-control">
 		<label>Brand</label>
@@ -58,7 +60,11 @@ if($res) {
 		<label>Contributor</label>
 		<input type="text" name="CarContributor" class="form-control" id="inputs" required/>
 	</div>
-		<button type="submit" name="submit" value="submit" class="btn btn-default">Add</button>
+	<div>
+		<label>Car Image</label>
+		<input type="file" name="CarImage" required>
+	</div><br>
+		<button type="submit" name="submit" value="submit" class="btn btn-info">Add</button>
 	</form>
 	</div>
 	</div>

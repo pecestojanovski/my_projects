@@ -45,7 +45,7 @@ if(isset($_POST['register'])) {
 		<label>Password</label>
 		<input type="password" name="password" class="form-control" id="inputs" required/>
 	</div>
-		<button type="submit" name="register" value="submit" class="btn btn-default">Register</button>
+		<button type="submit" name="register" value="submit" class="btn btn-info">Register</button>
 	</form>
 	</div>
 	</div>

@@ -12,8 +12,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 		while($row = mysqli_fetch_array($result)) {
 			if(password_verify($password, $row['password'])) {
 				$_SESSION['username'] = $username;
-				echo 'You are logged in as ' . $username . '';
-			} else {
+				header('location: index.php');
+				} else {
 				echo 'Wrong Credentials';
 			}
 		}
@@ -50,7 +50,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 		<label>Password</label>
 		<input type="password" name="password" class="form-control" id="inputs" required/>
 	</div>
-		<button type="submit" name="submit" value="submit" class="btn btn-default">Login</button>
+		<button type="submit" name="submit" value="submit" class="btn btn-info">Login</button>
 		
 	</form>
 	</div>
