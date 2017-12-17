@@ -1,0 +1,76 @@
+#mainPage {
+	background-color: #d9d9db;
+	text-align: center;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 60px auto;
+	width: 65%;
+	height: 490px;
+}
+
+#letters a{
+	background:#f7f7f7;
+    color:black;
+    font-family: Century Gothic;
+    font-size:20px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:2px solid #8c8c8c;
+    border-right: 2px solid #8c8c8c;
+    border-radius: 5px;
+    padding:15px;
+    margin:3px;
+	transition-duration: 0.4s;
+}
+
+#letters a:hover, #restartBtn:hover {
+	background-color: #d9d9db;
+}
+
+#letters a:active, #restartBtn:active {
+	background-color: #b6b6c6;
+}
+
+#lives {
+	font-family: Century Gothic;
+    font-size:20px
+}
+
+#pLives {
+	font-family: Century Gothic;
+    font-size:20px
+}
+
+#WORD {
+	margin: 60px;
+	font-family: Century Gothic;
+    font-size:30px;
+	color: #232d3d;
+	letter-spacing: 30px;
+}
+
+#restartBtn {
+	background:#f7f7f7;
+    color:black;
+    font-family: Century Gothic;
+    font-size:20px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:2px solid #8c8c8c;
+    border-right: 2px solid #8c8c8c;
+    border-radius: 5px;
+    padding:15px;
+    margin:30px;
+	float: right;
+	transition-duration: 0.4s;
+}
+
+#hang {
+	float: left;
+}
+
+#emptyHang, #hangHead, #hangBody, #hangArmR, #hangArmL, #hangArmR, #hangLegR, #hangLegL {
+	position: absolute;
+	top: 50px;
+	left: 160px;
+}
