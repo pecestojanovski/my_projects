@@ -1,0 +1,142 @@
+body {
+  background:white;
+}
+
+#background {
+    width:640px;
+    height:400px;
+    background:white;
+    margin:50px auto;
+}
+
+button {
+    border:0px;
+    color:black;
+}
+
+#result {
+    display:block;
+    font-family: Century Gothic;;
+    width:588px;
+    height:40px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#a3abb7;
+    color:#fff;
+    padding-top:20px;
+    font-size:20px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:10px;
+    border-radius:3px;
+}
+
+#result:hover {
+    
+    cursor: text;    
+}
+
+.rows {
+    width:900px;
+    margin-top:10px;
+}
+
+#delete {
+    width:140px;
+    height:60px;
+    margin-left:5px;
+    border-radius:3px;
+}
+
+.button-style {
+    width:140px;
+    height:60px;
+    margin-left:5px;
+    border-radius:3px;
+}
+
+.equal {
+    width:140px;
+    height:60px;
+    margin-left:5px;
+    border-radius:4px;
+}
+
+.first-child {
+ margin-left:25px;
+}
+
+ .number_col {
+    background:#f7f7f7;
+    color:black;
+    font-family: Century Gothic;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:1px solid #8c8c8c;
+}
+
+ .number_col:active {
+    background:#e2e2e2;
+    color:black;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+}
+
+.operations {
+    background:#d3d3d3;
+    color:black;
+    font-family: Century Gothic;;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:2px solid #8c8c8c;
+}
+
+.operations:active {
+    background:#c1c1c1;
+    color:black;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+}
+
+.delete-btn {
+    background:#d3d3d3;
+    color:black;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:2px solid #8c8c8c;
+}
+
+.delete-btn:active {
+    background:#c1c1c1;
+    color:black;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+}
+
+#equal-btn {
+    background:#41bde2;
+    color:black;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:2px solid #8c8c8c;
+}
+
+#equal-btn:active {
+    background:#22acd6;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+}
